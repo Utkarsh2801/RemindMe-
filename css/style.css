@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+*{
+  padding:0;
+  margin:0;
+}
+body{
+  background:url('../images/bg.jpg') no-repeat center center fixed;
+  background-size:cover;
+}
+
+.container{
+  margin:0px auto;
+  margin-top:200px;
+  width: 40%;
+  padding:2rem 4rem;
+  background: #fff;
+  box-sizing: border-box;
+  display:flex;
+  flex-direction: column;
+  min-height:600px;
+
+}
+
+h2{
+  font-family: 'Permanent Marker', cursive;
+  font-size:2.5em;
+  margin-bottom:6rem;
+}
+
+.add-task,.filter-task{
+  position:relative;
+  width:100%;
+}
+
+.add-task form{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height:180px;
+}
+
+input{
+  font-family: Arial;
+  box-sizing: border-box;
+  padding: 5px 0px;
+  width:100%;
+  font-size: 1.2rem;
+  border:none;
+  border-bottom: 2px solid #00A0E3;
+  background: transparent;
+  color:#000;
+}
+
+
+label{
+  font-family: Arial;
+  display:block;
+  position:absolute;
+  top:-5px;
+  left:0px;
+  pointer-events: none;
+  transition: .5s;
+  font-size: 1.1rem;
+  font-weight: normal;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color:#000;
+}
+
+.filter-task label{
+  top:10px;
+}
+input:focus{
+  outline:none;
+}
+.add-task input:focus ~ label,
+.add-task input:valid ~ label,
+.filter-task input:focus ~ label,
+.filter-task input:valid ~ label{
+  top:-15px;
+  font-size: 0.8rem;
+  color:#000;
+}
+
+#add-btn{
+  border:2px solid #00A0E3;
+  background:#00A0E3;
+  padding:10px 30px;
+  border-radius: 30px;
+  color:#fff;
+  font-size:1.1rem;
+  margin-bottom:4rem;
+  cursor:pointer;
+  letter-spacing: 0.1rem;
+}
+
+#clear-btn{
+  border:2px solid #00A0E3;
+  background:#00A0E3;
+  padding:10px 30px;
+  border-radius: 30px;
+  color:#fff;
+  font-size:1.1rem;
+  cursor:pointer;
+}
+
+#clear-btn{
+  margin-top:2rem;
+}
+
+.task-list{
+  margin-top:6rem;
+}
+
+.task-list1{
+  list-style-type:none;
+}
+
+.task-list1 li{
+  padding:10px 20px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  display:flex;
+  margin-top: 20px;
+  border: 2px solid #393185;
+  border-left:8px solid #393185;
+}
+
+.task-list1 li p{
+  flex-grow: 1;
+  font-size: 1.3rem;
+  letter-spacing: 0.08rem;
+  font-family: calibri;
+  font-weight:bold;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.task-list1 li i{
+  color:#EF7F1A;
+  font-size: 1.2rem;
+}
+
+
+@media screen and (max-width:1250px){
+  .filter-task .filter-form{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:117px;
+  }
+  .filter-task label{
+    top:0px;
+  }
+
+
+}
+
+
+@media screen and (max-width:1010px){
+  .container{
+    width:70%;
+  }
+}
+
+@media screen and (max-width:550px){
+  .container{
+    width:100%;
+  }
+}
